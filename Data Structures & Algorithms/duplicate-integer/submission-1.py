@@ -1,0 +1,13 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        d={}
+        for i in range(len(nums)):
+            if nums[i] not in d:
+                d[nums[i]]=1
+            else:
+                d[nums[i]]+=1
+        for i,j in d.items():
+            if j>1:
+                return True
+        return False                        
+                 
